@@ -82,19 +82,19 @@
 						<div class="inner">
 							<h2 class="major">Get in touch</h2>
 							<p>Thank you for considering my services! If you're looking for a dedicated and skilled  developer to bring your project to life, I’d love to connect. You can learn more about my work, explore my portfolio, or get in touch with me directly at the links below."</p>
-							<form method="post" action="#">
+							<form action="assets/sass/send_email.php" method="post" >
 								<div class="fields">
 									<div class="field">
 										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
+										<input type="text" name="name" id="name"required><br><br/>
 									</div>
 									<div class="field">
 										<label for="email">Email</label>
-										<input type="email" name="email" id="email" />
+										<input type="email" name="email" id="email" required><br><br/>
 									</div>
 									<div class="field">
 										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="4"></textarea>
+										<textarea name="message" id="message" rows="4"required></textarea><br><br
 									</div>
 								</div>
 								<ul class="actions">
