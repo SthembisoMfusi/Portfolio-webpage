@@ -1,20 +1,17 @@
 <?php
-if($_SERVER['REQUEST_METHOD'] == 'POST') {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['name'];
+    $email = $_POST['email'];
     $message = $_POST['message'];
 
-    // Format the email body
-    $subject = "New Message from Potential Employer";
-    $body = "Name: " . $name . "\n\n" . "Message: " . $message;
+    $to = "thanduxolomfusi@gmail.com";
+    $subject = "New Message from Contact Form";
+    $body = "Name: $name\nEmail: $email\nMessage:\n$message";
 
-    // Send the email
-    $to = "your_email@example.com";
-    $headers = "From: " . $name . "\r\n";
-
-    if(mail($to, $subject, $body, $headers)) {
-        echo "Email sent successfully!";
+    if (mail($to, $subject, $body)) {
+        echo "Message sent successfully!";
     } else {
-        echo "Error sending email. Please try again.";
+        echo "Failed to send message.";
     }
 }
 ?>
